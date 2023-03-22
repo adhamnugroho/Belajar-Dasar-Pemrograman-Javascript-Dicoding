@@ -18,3 +18,12 @@ Cara override method pada subclass mirip seperti override constructor, tetapi ki
 C. Main3.js
 
 Jika dibutuhkan, kita juga bisa memanggil method sendMessage() dari superclass melalui keyword super.sendMessage().
+
+
+D. Main4.js
+
+Seluruh class sudah terdefinisikan dengan baik, tetapi kurang Full-Stack Developer. Apakah Anda punya ide cara mendefinisikan class FullStackDeveloper yang efektif tanpa ada kode repetitif menggunakan pewarisan?
+
+Solusinya adalah meninggalkan pewarisan dan gunakan teknik object composition. Jika Anda lihat kembali kode di atas, pewarisan mendorong kita untuk menstrukturkan kode dengan pendekatan peran atau identitas class, yakni Front-End Developer, Back-End Developer, DevOps, dan Full-Stack Developer. Sedangkan object composition, dia tidak memperdulikan peran, melainkan kode distrukturkan berdasarkan kemampuan yang dapat dilakukan, seperti buildUI(), buildAPI(), dan deployApp().
+
+
