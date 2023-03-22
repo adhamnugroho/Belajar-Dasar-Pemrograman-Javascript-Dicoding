@@ -1,0 +1,8 @@
+Build in Class In Javascript
+
+A. main1.js
+
+Sekilas, tidak ada spesial dari class ini karena sebenarnya kita bisa membuat array seperti itu dengan menggunakan array literals (tanda []). Namun, dengan class Array, kita bisa menerapkan konsep pewarisan untuk membuat subclass baru yang dapat kita modifikasi sesuai kebutuhan.
+
+Contohnya, kita ingin membuat sebuah struktur data mirip array, tetapi nilai tiap elemennya unik, maka kita bisa membuat subclass UniqueArray yang mewarisi class Array. Di dalam subclass UniqueArray, implementasinya tampak seperti ini.
+
