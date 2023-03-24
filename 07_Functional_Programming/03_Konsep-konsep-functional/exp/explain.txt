@@ -1,0 +1,59 @@
+#Konsep Konsep Functional Programming
+
+A. Pure Function
+
+Salah satu konsep besar dari paradigma FP adalah Pure Function. Apa artinya? Pure Function merupakan konsep dari pembuatan fungsi yang mengharuskan fungsi untuk tidak bergantung terhadap nilai yang berada di luar fungsi atau parameternya. Sehingga mau seperti apa keadaanya, fungsi yang dibuat selalu menghasilkan sesuatu yang sama, terkecuali bila fungsi tersebut diberikan nilai parameter yang berbeda.
+
+Untuk lebih jelasnya, simak kode pada file 'main1.js' berikut:
+
+Menurut Anda, apakah fungsi hitungLuasLingkaran merupakan pure function atau impure function (lawan dari pure function)? Jika Anda menjawab impure function, Anda tepat sekali!
+
+Fungsi tersebut tidak bisa dikatakan pure function karena ia membutuhkan nilai yang berada di luar dari fungsinya, yakni nilai PI. Bila nilai PI berubah, maka penggunaan fungsi menghasilkan nilai yang berbeda walaupun diberikan nilai parameter yang sama.
+
+Berikut contoh yang menggunakan pure function, pada file 'main2.js'.
+
+Pure function pada object, file 'main3.js'.
+
+Agar lebih mudah dalam mengetahui apakah fungsi yang Anda buat sudah pure atau belum, pastikan 3 konsep ini ada pada fungsi yang Anda buat.
+
+- Mengembalikan nilai yang sama bila inputannya (nilai parameter) sama.
+- Hanya bergantung pada argumen yang diberikan.
+- Tidak menimbulkan efek samping.
+
+Bila 3 konsep di atas terpenuhi, maka bisa dipastikan Anda membuat sebuah pure function.
+
+B. Immutability
+
+Konsep yang kedua adalah immutability. Immutable berarti sebuah objek tidak boleh diubah setelah objek tersebut dibuat. Kontras dengan mutable yang artinya objek boleh diubah setelah objek tersebut dibuat.
+
+Konsep immutability sangat kental pada paradigma FP. Anda bisa lihat sebelumnya pada contoh penggunaan array map. Ketika menggunakan array.map(), alih-alih ia mengubah nilai dari array itu sendiri, malah ia membuat atau menghasilkan array baru. Seperti pada file 'main4.js'.
+
+Lantas, bagaimana bila kita benar-benar perlu mengubah nilai dari sebuah objek dan ingin menerapkan FP sepenuhnya? ? Sama seperti fungsi array map(), alih-alih mengubah nilai objek secara langsung, terapkan perubahan tersebut pada nilai return dalam objek baru. File 'main5.js'.
+
+C. Rekursif
+
+Konsep selanjutnya yang ada di Functional Programming adalah rekursif. Apa itu rekursif? Rekursif merupakan teknik pada sebuah function yang memanggil dirinya sendiri.
+
+Kita akan mencoba mengubah fungsi countDown yang biasanya kita buat menggunakan sintaksis iterasi seperti for, foreach, while seperti kode di bawah menjadi bentuk rekursif. file 'main6.js'.
+
+Maka, bentuk rekursinya adalah sebagai berikut: file 'main7.js'
+
+Dengan teknik rekursif ini, kita sebenarnya bisa menggantikan operasi iterasi dengan rekursi. Namun tidak sebatas itu saja, dengan rekursi kita dapat membuat dan mengolah data structures seperti Tree dan Array.
+
+D. Higher-Order Function
+
+JavaScript memiliki kemampuan First Class Functions, karena itu fungsi pada JavaScript dapat diperlakukan layaknya sebuah data. Kita bisa menyimpan function dalam variabel, memberikan function sebagai parameter pada fungsi lainnya, hingga mengembalikan function di dalam function. file 'main8.js'
+
+Karena dengan kemampuan First Class Functions-nya itu, kita dapat membuat Higher-Order Function secara mudah. Tunggu, tunggu. Apa itu Higher-Order Function?
+
+Higher-Order Function menjadi bagian konsep pada paradigma FP. Higher-Order Function merupakan fungsi yang dapat menerima fungsi lainnya pada argumen; mengembalikan sebuah fungsi; atau bahkan keduanya.
+
+Teknik Higher-Order Function biasanya digunakan untuk:
+
+- Mengabstraksi atau mengisolasi sebuah aksi, event, atau menangani alur    asynchronous menggunakan callback, promise, dan lainnya.
+- Membuat utilities yang dapat digunakan di berbagai tipe data.
+- Membuat teknik currying atau function composition.
+
+Array map() merupakan salah satu contoh Higher-Order Function yang ada di JavaScript. Karena dalam penggunaanya, ia menerima satu buah argumen yang merupakan sebuah function.
+
+Dengan mengetahui adanya Higher-Order Function, Anda bisa membuat fungsi map() versi Anda sendiri! file 'main9.js'
