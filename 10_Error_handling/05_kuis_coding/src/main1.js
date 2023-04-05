@@ -52,7 +52,7 @@ class ValidationError extends Error {
 
 // TODO 2
 
-let ValidateNumberInput = (a, b, c) => {
+let validateNumberInput = (a, b, c) => {
   if (typeof a !== "number") {
     throw new ValidationError("Argumen pertama harus number");
   }
@@ -64,18 +64,12 @@ let ValidateNumberInput = (a, b, c) => {
   if (typeof c !== "number") {
     throw new ValidationError("Argumen ketiga harus number");
   }
-
-  return "angka semua";
 };
 
 const detectTriangle = (a, b, c) => {
   // TODO 3
   try {
-    const validateInput = ValidateNumberInput(a, b, c);
-
-    if (validateInput !== "angka semua") {
-      throw new ValidationError(validateInput);
-    }
+    validateNumberInput(a, b, c);
 
     if (a === b && b === c) {
       return "Segitiga sama sisi";
@@ -87,24 +81,8 @@ const detectTriangle = (a, b, c) => {
 
     return "Segitiga sembarang";
   } catch (error) {
-    if (error instanceof SyntaxError) {
-      return `JSON Syntax Error: ${error.message}`;
-    } else if (error instanceof ValidationError) {
-      return `${error.message}`;
-    } else if (error instanceof ReferenceError) {
-      return `${error.message}`;
-    } else {
-      return `${error.stack}`;
-    }
+    return error.message;
   }
 };
 
-let segitiga1 = detectTriangle(3, 3, 3);
-let segitiga2 = detectTriangle(false, 3, 3);
-let segitiga3 = detectTriangle(3, false, 3);
-let segitiga4 = detectTriangle(3, 3, false);
-
-console.log(segitiga1);
-console.log(segitiga2);
-console.log(segitiga3);
-console.log(segitiga4);
+detectTriangle(3, 3, 3);
