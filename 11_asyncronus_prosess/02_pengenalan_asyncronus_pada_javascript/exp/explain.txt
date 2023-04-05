@@ -1,0 +1,7 @@
+# Pengenalan Asyncronus
+
+Kode pada sebuah program biasanya dijalankan secara berurutan dan saling menunggu hingga prosesnya selesai. Contoh, pada baris pertama kita memanggil fungsi X dan baris kedua kita memanggil fungsi Y, maka fungsi Y hanya akan dijalankan setelah seluruh proses yang berhubungan dengan fungsi X selesai, begitu juga dengan baris kode selanjutnya. Proses yang dijalankan berdasarkan sebuah urutan dan saling menunggu disebut dengan proses synchronous.
+
+Dalam asynchronous process, kita bisa menjalankan proses yang berada di baris kedua tanpa harus menunggu kode pada baris pertama selesai dieksekusi. Arti lainnya, kita bisa melakukan lebih dari satu proses sekaligus dalam waktu yang bersamaan. Mengapa hal ini penting? Simak contoh berikut.
+
+Kode di bawah ini merupakan fungsi untuk menghasilkan bilangan prima sebanyak input dari pengguna. Jika Anda menginput dengan nilai yang besar, contohnya 1 juta, Anda bisa merasakan sedikit delay hingga akhirnya pesan “proses membuat 1000000 bilangan prima selesai”.
