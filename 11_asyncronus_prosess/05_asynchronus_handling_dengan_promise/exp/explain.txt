@@ -78,6 +78,8 @@ Perhatikan juga bahwa .then() dan .catch() selalu mengembalikan Promise, itulah 
 
 Mari kita lihat kode lengkapnya agar dapat Anda coba dan jalankan.
 
+file "main1.js"
+
 Jalankan kode di atas, maka fungsi .then() akan terpanggil dan menampilkan data users pada console.
 
 Fungsi .catch() tidak akan terpanggil karena Promise tidak pernah berstatus rejected. Jika Anda ingin Promise menghasilkan status rejected, ubahlah nilai argumen pada pemanggilan getUsers() menjadi true.
