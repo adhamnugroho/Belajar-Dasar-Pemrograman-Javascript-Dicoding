@@ -56,9 +56,22 @@ Sekarang, kita memiliki fungsi getUsers(), tetapi dapat menerapkan Promise tanpa
         .catch(err => console.log(err.message)); // cannot retrieve users due offline
 ]
 
+Sangat mudah, bukan? Namun, terdapat beberapa catatan ketika Anda hendak mengubah fungsi asynchronous callback-based menjadi Promise-based menggunakan util.promisify().
+
 1. Promisify selalu menganggap callback berada pada argumen paling akhir sebuah fungsi asynchronous. Dengan begitu, Anda tidak dapat menggunakan promisify jika callback berada di posisi awal ataupun tengah argumen.
 2. Promisify akan bekerja dengan baik jika callback memiliki struktur argumen callback(error, data). Jika callback memiliki struktur argumen di luar aturan tersebut, nilai yang dibawa oleh Promise ketika fulfilled dan rejected bisa tertukar.
 
 Catatan: Singkatnya, promisify hanya dapat digunakan pada fungsi yang mengikuti aturan Node.js callback. Inilah salah satu alasan perlunya mengikuti aturan yang standar.
 
 Dalam kasus nyata, Anda bisa gunakan promisify dalam mengubah berbagai fungsi yang disediakan Node.js menjadi Promise-based, contohnya fungsi fs.readFile() yang digunakan untuk membaca berkas secara asynchronous.
+[
+    const fs = require('fs');
+    const { promisify } = require('util');
+
+    const readFilePromise = promisify(fs.readFile);
+
+    readFilePromise('./data.txt', 'utf8')
+    .then(data => console.log(data))
+    .catch(err => console.log(err.message));
+
+]

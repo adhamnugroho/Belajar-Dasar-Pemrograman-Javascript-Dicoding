@@ -1,0 +1,3 @@
+Anda berhasil membaca teks dari berkas.
+
+Ini adalah baris ketiga
