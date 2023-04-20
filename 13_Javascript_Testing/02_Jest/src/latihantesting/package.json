@@ -1,0 +1,14 @@
+{
+  "name": "latihantesting",
+  "version": "1.0.0",
+  "description": "project for exercise testing code by developer with jest package",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "adham_nugroho",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
