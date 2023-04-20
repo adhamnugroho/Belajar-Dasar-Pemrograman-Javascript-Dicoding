@@ -1,0 +1,15 @@
+{
+  "name": "test-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sum.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "adham_nugroho",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
