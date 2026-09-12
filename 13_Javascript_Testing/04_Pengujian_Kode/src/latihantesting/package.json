@@ -10,6 +10,6 @@
   "author": "adham_nugroho",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^29.5.0"
+    "jest": "^30.0.0"
   }
 }
